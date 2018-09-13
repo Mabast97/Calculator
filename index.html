@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" >
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="calculator">
+        
+        <table>
+            <tr id="textField">
+                <form id="form" name="myCalculator">
+                    <input type="text" name="myInput" readonly placeholder="0"/>
+                </form>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="myCalculator.myInput.value = ''">AC</button></td>
+                <td><button type="button" onclick="myCalculator.myInput.value +='-'">+/-</button></td>
+                <td><button type="button" onclick="myCalculator.myInput.value = myCalculator.myInput.value / 100">%</button></td> 
+                <td><button type="button" class="lastButtons" onclick="myCalculator.myInput.value += ' / '">/</button></td>
+            </tr>
+
+            <tr>
+                <td><button type="button" onclick="myCalculator.myInput.value += 7">7</button></td>
+                <td><button type="button" onclick="myCalculator.myInput.value += 8">8</button></td>
+                <td><button type="button" onclick="myCalculator.myInput.value += 9">9</button></td>
+                <td><button type="button" class="lastButtons" onclick="myCalculator.myInput.value += ' * ' ">*</button></td>
+            </tr>
+
+            <tr>
+                <td><button type="button" onclick="myCalculator.myInput.value += 4">4</button></td>
+                <td><button type="button" onclick="myCalculator.myInput.value += 5">5</button></td>
+                <td><button type="button" onclick="myCalculator.myInput.value += 6">6</button></td>
+                <td><button type="button" class="lastButtons" onclick="myCalculator.myInput.value += ' - '">-</button></td>
+            </tr>
+
+            <tr>
+                <td><button type="button" onclick="myCalculator.myInput.value += 1">1</button></td>
+                <td><button type="button" onclick="myCalculator.myInput.value += 2">2</button></td>
+                <td><button type="button" onclick="myCalculator.myInput.value += 3">3</button></td>
+                <td><button type="button" class="lastButtons" onclick="myCalculator.myInput.value += ' + '">+</button></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><button type="button" onclick="myCalculator.myInput.value += 0">0</button></td>
+                <td><button type="button" onclick="myCalculator.myInput.value += '.'">.</button></td>
+                <td><button type="button" class="lastButtons" id="result" onclick="myCalculator.myInput.value = eval(myCalculator.myInput.value)">=</button></td>
+            </tr>
+        </table>
+
+    </div> <!-- Calculator -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</body>
+</html>
